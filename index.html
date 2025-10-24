@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard de Vendas Globais</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(120deg, #e0e7ff 0%, #f7f7f7 100%);
+        margin: 0;
+        min-height: 100vh;
+      }
+      header {
+        background: #1e293b;
+        color: #fff;
+        padding: 32px 20px 24px 20px;
+        text-align: center;
+        box-shadow: 0 2px 8px #0002;
+        letter-spacing: 1px;
+      }
+      section {
+        margin: 32px auto;
+        max-width: 900px;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px #0002;
+        padding: 32px 24px;
+        transition: box-shadow 0.2s;
+      }
+      section:hover {
+        box-shadow: 0 8px 32px #0003;
+      }
+      h2 {
+        color: #334155;
+        margin-top: 0;
+        font-size: 1.3rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+      .grafico {
+        text-align: center;
+        margin: 24px 0 8px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+      }
+      .grafico img {
+        max-width: 420px;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px #0001;
+        background: #f1f5f9;
+        padding: 8px;
+        transition: box-shadow 0.2s;
+      }
+      .grafico img:hover {
+        box-shadow: 0 4px 24px #6366f1aa;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 16px 0;
+        background: #f8fafc;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      th,
+      td {
+        border: 1px solid #e2e8f0;
+        padding: 10px 14px;
+        text-align: left;
+      }
+      th {
+        background: #e0e7ff;
+        color: #334155;
+        font-weight: 600;
+      }
+      .pergunta {
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #6366f1;
+        font-size: 1.08rem;
+        letter-spacing: 0.2px;
+      }
+      @media (max-width: 600px) {
+        section {
+          padding: 16px 4px;
+        }
+        .grafico img {
+          max-width: 98vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Dashboard de Vendas Globais</h1>
+      <p>Resumo das principais análises</p>
+    </header>
+    <section>
+      <div class="pergunta">
+        1. Quem são os meus 10 maiores clientes, em termos de vendas ($)?
+      </div>
+      <div class="grafico">
+        <img src="imagens/top10_clientes.png" alt="Top 10 Clientes" />
+      </div>
+    </section>
+    <section>
+      <div class="pergunta">
+        2. Quais os três maiores países, em termos de vendas ($)?
+      </div>
+      <div class="grafico">
+        <img src="imagens/top3_paises.png" alt="Top 3 Países" />
+      </div>
+    </section>
+    <section>
+      <div class="pergunta">
+        3. Quais as categorias de produtos que geram maior faturamento (vendas
+        $) no Brasil?
+      </div>
+      <div class="grafico">
+        <img src="imagens/categorias_brasil.png" alt="Categorias Brasil" />
+      </div>
+    </section>
+    <section>
+      <div class="pergunta">
+        4. Qual a despesa com frete envolvendo cada transportadora?
+      </div>
+      <div class="grafico">
+        <img
+          src="imagens/frete_por_transportadora.png"
+          alt="Frete por Transportadora"
+        />
+      </div>
+    </section>
+    <section>
+      <div class="pergunta">
+        5. Quais são os principais clientes (vendas $) do segmento “Calçados
+        Masculinos” (Men´s Footwear) na Alemanha?
+      </div>
+      <div class="grafico">
+        <img
+          src="imagens/top_clientes_mens_footwear_germany.png"
+          alt="Clientes Calçados Masculinos Alemanha"
+        />
+      </div>
+    </section>
+    <section>
+      <div class="pergunta">
+        6. Quais os vendedores que mais dão descontos nos Estados Unidos?
+      </div>
+      <div class="grafico">
+        <img
+          src="imagens/descontos_vendedores_usa.png"
+          alt="Vendedores Desconto USA"
+        />
+      </div>
+    </section>
+    <section>
+      <div class="pergunta">
+        7. Quais os fornecedores que dão a maior margem de lucro ($) no segmento
+        de “Vestuário Feminino” (Womens wear)?
+      </div>
+      <div class="grafico">
+        <img
+          src="imagens/fornecedores_maior_margem_womens.png"
+          alt="Fornecedores Margem Womenswear"
+        />
+      </div>
+    </section>
+    <section>
+      <div class="pergunta">
+        8. Quanto que foi vendido ($) no ano de 2009? Analisando as vendas
+        anuais entre 2009 e 2012, podemos concluir que o faturamento vem
+        crescendo, se mantendo estável ou decaindo?
+      </div>
+      <div class="grafico">
+        <img src="imagens/questao8.png" alt="Vendas por Ano" />
+      </div>
+    </section>
+    <section>
+      <div class="pergunta">
+        9. Quais são os principais clientes (vendas $) do segmento “Calçados
+        Masculinos” (Men´s Footwear) no ano de 2013. Para quais cidades houve
+        venda e quanto?
+      </div>
+      <div class="grafico">
+        <!-- Imagens para a questão 9 não encontradas na pasta, adicione se necessário -->
+      </div>
+    </section>
+    <section>
+      <div class="pergunta">
+        10. Na Europa, quanto que se vende ($) para cada país?
+      </div>
+      <div class="grafico">
+        <img src="imagens/eu_sales_by_country.png" alt="Vendas Europa" />
+      </div>
+    </section>
+  </body>
+</html>
